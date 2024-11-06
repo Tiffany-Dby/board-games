@@ -1,0 +1,7 @@
+@use "../../assets/styles/mixins" as *;
+
+.form {
+  @include container($width: 300px);
+  @include flex("column", "nowrap");
+  gap: 1.5rem;
+}

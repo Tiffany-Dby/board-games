@@ -1,0 +1,65 @@
+@mixin container($width: "800px", $padding: var(--padding-l)) {
+  width: 100%;
+  margin: 0 auto;
+  max-width: #{$width};
+  padding: #{$padding};
+}
+
+@mixin flex($direction: "row", $wrap: "wrap") {
+  display: flex;
+  flex-wrap: #{$wrap};
+  flex-direction: #{$direction};
+}
+
+@mixin pos($ai: "center", $jc: "center") {
+  align-items: #{$ai};
+  justify-content: #{$jc};
+}
+
+@mixin input-reseter {
+
+  &:-webkit-autofill,
+  &:-webkit-autofill:hover,
+  &:-webkit-autofill:focus {
+    border: none;
+  }
+
+  &:-webkit-outer-spin-button,
+  &:-webkit-inner-spin-button {
+    margin: 0;
+    -webkit-appearance: none;
+  }
+
+  /* Firefox */
+  &[type="number"] {
+    -moz-appearance: textfield;
+  }
+
+  /* Safari */
+  &[type="number"]::-webkit-inner-spin-button,
+  &[type="number"]::-webkit-outer-spin-button {
+    // -webkit-appearance: none;
+    margin: 0;
+  }
+
+  &::-webkit-calendar-picker-indicator {
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    position: absolute;
+  }
+
+  border: none;
+  outline: none;
+  font-style: normal;
+  background: transparent;
+
+  &:not(select) {
+    appearance: none;
+  }
+}

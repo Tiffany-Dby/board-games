@@ -1,0 +1,18 @@
+@use "../../assets/styles/mixins" as *;
+
+.btn {
+  @include input-reseter;
+  background-color: var(--black);
+  box-shadow: var(--shadow-border-xs) var(--white);
+  color: var(--white);
+  border-radius: var(--radius-xs);
+  padding: var(--padding-s);
+  cursor: pointer;
+  transition: all .5s ease;
+  
+  &:hover {
+    // box-shadow: var(--shadow-border-s) var(--black);
+    background-color: var(--accent);
+    color: var(--black);
+  }
+}

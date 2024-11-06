@@ -1,0 +1,38 @@
+@use "../../assets/styles/mixins" as *;
+
+.header {
+  background-color: var(--black);
+  padding: var(--padding-l) 0;
+  box-shadow: var(--shadow-1-1-10);
+  
+  &__container {
+    @include container;
+  }
+
+  &__container, &__nav ul {
+    @include pos($jc: "space-between");
+    @include flex
+  }
+
+  &__nav ul {
+    gap: 1.5rem;
+  }
+}
+
+.main {
+  flex-grow: 1;
+  
+  &__container {
+    @include container;
+  }
+}
+
+.footer {
+  padding: var(--padding-l);
+  text-align: center;
+  background-color: var(--black);
+  
+  &__container {
+    @include container;
+  }
+}
