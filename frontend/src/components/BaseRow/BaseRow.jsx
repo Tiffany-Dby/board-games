@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import "./Row.scss";
+import "./BaseRow.scss";
 
 const BaseRow = ({ id, name, score }) => {
   return (

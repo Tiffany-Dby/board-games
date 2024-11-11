@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import "./BaseSelect.scss";
 
-const BaseSelect = ({ id, label, value, options, onChange }) => {
+const BaseSelect = ({ id, label, value, options, onChange, disabled }) => {
   const handleChange = (value) => onChange(value);
   return (
     <>
@@ -15,6 +15,7 @@ const BaseSelect = ({ id, label, value, options, onChange }) => {
           id={id}
           value={value || ""}
           onChange={(e) => handleChange(e.target.value)}
+          disabled={disabled}
         >
           {options.map((option, index) => (
             <option key={index} value={option.value}>
@@ -33,6 +34,7 @@ BaseSelect.propTypes = {
   value: PropTypes.string.isRequired,
   options: PropTypes.array.isRequired,
   onChange: PropTypes.func.isRequired,
+  disabled: PropTypes.bool,
 };
 
 export default BaseSelect;

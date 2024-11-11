@@ -1,0 +1,28 @@
+table {
+  border-collapse: collapse;
+  width: 100%;
+
+  thead {
+    background-color: hsla(0, 0%, 100%, 0.055);
+
+    th {
+      border-bottom: 1px solid var(--white);
+
+      &:first-child {
+        border-top-left-radius: var(--radius-m);
+      }
+      &:last-child {
+        border-top-right-radius: var(--radius-m);
+      }
+
+      &:not(:last-child) {
+        border-right: 1px solid var(--white);
+      }
+    }
+  }
+
+  th {
+    padding: var(--padding-s);
+    text-align: right;
+  }
+}

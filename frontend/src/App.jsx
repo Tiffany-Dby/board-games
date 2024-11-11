@@ -3,8 +3,8 @@ import "./App.scss";
 import BaseLayout from "@/components/BaseLayout/BaseLayout";
 import { APP_ROUTES } from "./constants/routes";
 import Home from "@/views/Home/Home";
-import CreateGame from "@/views/Blackjack/CreateGame";
-import GameBoard from "@/views/Blackjack/GameBoard";
+import CreateGame from "@/views/Blackjack/CreateGame/CreateGame";
+import GameBoard from "@/views/Blackjack/GameBoard/GameBoard";
 
 const App = () => {
   return (

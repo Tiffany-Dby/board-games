@@ -1,0 +1,26 @@
+tbody {
+  tr {
+    transition: all 0.5s ease;
+
+    &:nth-child(even) {
+      background-color: hsla(0, 0%, 100%, 0.035);
+    }
+
+    &:hover {
+      background-color: hsla(0, 0%, 100%, 0.15);
+    }
+
+    &:not(:last-child) {
+      border-bottom: 1px solid var(--white);
+    }
+
+    td {
+      padding: var(--padding-s);
+      text-align: right;
+
+      &:not(:last-child) {
+        border-right: 1px solid var(--white);
+      }
+    }
+  }
+}

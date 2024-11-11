@@ -1,0 +1,46 @@
+@use "../../../assets/styles/mixins" as *;
+
+.game-board {
+  &__display {
+    text-align: center;
+    font-size: var(--font-size-l);
+    box-shadow: var(--shadow-border-s) var(--black),
+      inset -1px -1px 1px 0px rgba(255, 255, 255, 0.5),
+      inset 1px 1px 2px 0px var(--black);
+    border-radius: var(--radius-m);
+    aspect-ratio: 1 / 1;
+    margin: 0 auto;
+    width: 7rem;
+
+    span {
+      display: flex;
+      @include pos;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__controls {
+    @include flex;
+    gap: 1rem;
+
+    & > .btn {
+      flex-grow: 1;
+    }
+  }
+
+  &__wrapper {
+    @include container($width: 300px);
+    @include flex("column", "nowrap");
+    gap: 1.5rem;
+
+    p {
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  &__table {
+    border: 1px solid var(--white);
+    border-radius: var(--radius-m);
+  }
+}

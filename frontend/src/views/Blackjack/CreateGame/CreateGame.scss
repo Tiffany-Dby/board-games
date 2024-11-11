@@ -1,0 +1,32 @@
+@use "../../../assets/styles/mixins" as *;
+
+.form {
+  @include container($width: 300px);
+  gap: 2.5rem;
+
+  &,
+  &__players,
+  &__buttons {
+    @include flex("column", "nowrap");
+  }
+
+  &__players {
+    gap: 1rem;
+  }
+
+  &__buttons {
+    gap: 1.5rem;
+  }
+
+  &__player-input {
+    display: grid;
+    grid-template-columns: 85% 15%;
+    grid-template-rows: auto auto;
+
+    button {
+      align-self: end;
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+  }
+}

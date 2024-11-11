@@ -1,4 +1,6 @@
-html, body, #root {
+html,
+body,
+#root {
   height: 100%;
 }
 
@@ -14,8 +16,9 @@ html {
 body {
   background-color: var(--primary);
   font-size: var(--font-size-n);
-  
-  &, a {
+
+  &,
+  a {
     color: var(--white);
   }
 }
@@ -26,7 +29,9 @@ ul {
   margin: 0;
 }
 
-h1, h2, p {
+h1,
+h2,
+p {
   margin: 0;
 }
 

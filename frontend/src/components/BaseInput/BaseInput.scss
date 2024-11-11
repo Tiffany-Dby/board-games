@@ -6,8 +6,8 @@
   border-radius: var(--radius-xs);
   padding: var(--padding-s) var(--padding-xs);
   color: var(--white);
-  transition: all .5s ease;
-  
+  transition: all 0.5s ease;
+
   &:focus-within {
     color: var(--accent);
     box-shadow: var(--shadow-border-xs) var(--accent);
@@ -15,7 +15,7 @@
 
   &__wrapper {
     @include flex("column", "nowrap");
-    gap: .25rem;
+    gap: 0.5rem;
 
     &:focus-within label {
       color: var(--accent);
@@ -25,5 +25,9 @@
   &__label {
     font-size: var(--font-label);
   }
-}
 
+  &:disabled {
+    color: var(--dark-grey);
+    cursor: not-allowed;
+  }
+}

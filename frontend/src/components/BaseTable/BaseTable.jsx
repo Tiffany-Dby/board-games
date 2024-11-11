@@ -1,13 +1,13 @@
-import Row from "@/components/Row/Row";
+import Row from "@/components/BaseRow/BaseRow";
 import PropTypes from "prop-types";
-import "./Table.scss";
+import "./BaseTable.scss";
 
 const BaseTable = ({ fields, data }) => {
   return (
     <table>
       <thead>
         <tr>
-          {fields.map((field, index) => (
+          {fields?.map((field, index) => (
             <th scope="col" key={index}>
               {field}
             </th>
